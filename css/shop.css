@@ -1,0 +1,396 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Smoth scroll */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Font */
+body {
+	font-family: "Coda", system-ui;
+	overflow-x: hidden;
+}
+
+/* Variables */
+:root {
+	--acent-pink: #f095bd;
+	--acent-black-text: #3f3e3e;
+}
+
+/* Upper Line */
+.upper__line {
+	height: 50px;
+	background-color: var(--acent-pink);
+	padding: 0px 20px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.upper__line p {
+	color: white;
+	font-weight: 400;
+	line-height: 28px;
+	letter-spacing: 1px;
+}
+
+.upper__line__text {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.upper__line__text p {
+	letter-spacing: 0;
+	font-weight: 800;
+	text-decoration: underline;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	max-width: 90vw;
+	margin: 0 auto;
+
+	height: 67px;
+}
+
+/* Links & account */
+.nav__links,
+.nav__acount {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+.nav__links a,
+.nav__acount a {
+	color: var(--acent-black-text);
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+/* Burger */
+#burger {
+	display: none;
+	width: 44px;
+	cursor: pointer;
+}
+
+@media (max-width: 835px) {
+	#burger {
+		display: block;
+	}
+
+	.nav__links.active {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		position: absolute;
+		width: 100%;
+		top: 120px;
+		left: 0;
+		padding: 20px;
+		background-color: var(--acent-pink);
+	}
+	.nav__links a {
+		color: white;
+		transition: 333ms ease;
+	}
+
+	.nav__links a:hover {
+		background-color: #eac6d5;
+		padding: 0 100%;
+		color: var(--acent-black-text);
+		transform: scale(1.1);
+	}
+
+	.nav__links a:focus {
+		padding: 0 100%;
+		background-color: #eac6d5;
+	}
+
+	.nav__links a:active {
+		transform: scale(0.9);
+	}
+
+	.nav__links {
+		display: none;
+	}
+}
+
+/* upperLine + nav, @MEDIA */
+@media (max-width: 1020px) {
+	.upper__line {
+		padding: 0px 10px;
+	}
+
+	.upper__line p {
+		font-size: 14px;
+	}
+
+	.upper__line__text {
+		gap: 20px;
+	}
+
+	.upper__line__text p {
+		font-weight: 700;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 720px) {
+	.upper__line {
+		padding: 0px 10px;
+		margin: 0 auto;
+	}
+
+	.upper__line p {
+		margin: 0 auto;
+		font-size: 10px;
+		font-size: 14px;
+	}
+
+	.upper__line__text {
+		gap: 20px;
+		flex-wrap: wrap;
+		height: auto;
+	}
+
+	.upper__line__text {
+		display: none;
+	}
+
+	.upper__line__text p {
+		font-weight: 500;
+		font-size: 10px;
+	}
+
+	.nav__acount a {
+		font-size: 14px;
+	}
+
+	#logo {
+		width: 100px;
+	}
+}
+
+/* Video */
+video {
+	max-width: 100%;
+	height: 90%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+/* card */
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.card {
+	width: 24rem;
+	height: 36rem;
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+	color: #fff;
+	box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.9;
+	transition: opacity 0.2s ease-out;
+}
+
+.card-content h2 {
+	position: absolute;
+	inset: auto auto 30px 30px;
+	margin: 0;
+	transition: inset 0.3s 0.3s ease-out;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.card-content p,
+.card-content a {
+	position: absolute;
+	opacity: 0;
+	max-width: 80%;
+	transition: opacity 0.3s ease-out;
+	font-size: 18px;
+}
+
+.card-content p {
+	inset: auto auto 90px 30px;
+}
+
+.card-content a {
+	inset: auto auto 20px 30px;
+	color: inherit;
+	text-decoration: none;
+}
+
+.card img {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.card:hover h2 {
+	inset: auto auto 140px 30px;
+	transition: inset 0.3s ease-out;
+}
+
+.card:hover p,
+.card:hover a {
+	opacity: 1;
+	transition: opacity 0.5s 0.1s ease-in;
+}
+
+.card:hover img {
+	transition: opacity 0.3s ease-in;
+	opacity: 1;
+}
+
+.button {
+	border: none;
+	padding: 12px 60px;
+	border-radius: 24px;
+	font-size: 12px;
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.button.fill {
+	background: rgba(0, 212, 255, 0.9);
+	color: rgba(255, 255, 255, 0.95);
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+.button.fill:hover {
+	transform: scale(1.125);
+	border-color: rgba(255, 255, 255, 0.9);
+	transition: all 0.3s ease;
+}
+
+.button.outline {
+	background: transparent;
+	color: rgba(0, 212, 255, 0.9);
+	border: 1px solid rgba(0, 212, 255, 0.6);
+	transition: all 0.3s ease;
+}
+
+.button.outline:hover {
+	transform: scale(1.125);
+	color: rgba(255, 255, 255, 0.9);
+	border-color: rgba(255, 255, 255, 0.9);
+	transition: all 0.3s ease;
+}
+
+/* Form */
+.feedback-form-container {
+	width: 100%;
+	max-width: 600px;
+	margin: 2rem auto;
+	padding: 2rem;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+	color: #333;
+}
+
+.feedback-form-container h2 {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+	color: #333;
+	font-weight: 700;
+}
+
+.feedback-form .form-group {
+	margin-bottom: 1rem;
+}
+
+.feedback-form label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #333;
+	font-weight: 600;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.9);
+	color: #333;
+	font-size: 1rem;
+	outline: none;
+	transition: border 0.3s ease-in-out;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+	border: 1px solid rgba(0, 212, 255, 0.9);
+}
+
+.feedback-form textarea {
+	resize: none;
+}
+
+.feedback-form fieldset {
+	border: none;
+}
+
+.feedback-form .form-actions {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.feedback-form .btn {
+	padding: 12px 24px;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: none;
+	border-radius: 20px;
+}
+
+.feedback-form .btn.fill {
+	background: rgba(0, 212, 255, 0.9);
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.feedback-form .btn.fill:hover {
+	transform: scale(1.1);
+	background: rgba(0, 180, 230, 0.9);
+}

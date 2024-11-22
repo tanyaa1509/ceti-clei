@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/shop.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Shop</title>
+	</head>
+	<body>
+		<div class="upper__line">
+			<p>NEW REALEASE!</p>
+
+			<span class="upper__line__text">
+				<p>CNC YOGA MAT</p>
+				<p>CNC ELEGANT SPORTS BRA</p>
+				<p>CNC WRIST WEIGHT BRACELETS</p>
+			</span>
+		</div>
+
+		<nav class="nav">
+			<img src="./svg/burger.svg" alt="burger" id="burger" />
+
+			<div class="nav__links" id="menu">
+				<a href="./shop.html">Shop</a>
+				<a href="#warring">About</a>
+			</div>
+
+			<a href="./index.html">
+				<img src="./svg/logo.svg" alt="logo" id="logo" />
+			</a>
+
+			<div class="nav__acount">
+				<a href="#">Search</a>
+				<a href="#">Cart(0)</a>
+			</div>
+		</nav>
+
+		<video preload="metadata" autoplay muted loop>
+			<source src="./video/video.mp4" type="video/mp4" />
+			Ваш браузер не підтримує відео. Оновіть браузер або завантажте відео
+			<a href="./video/video.mp4">тут</a>.
+		</video>
+
+		<h2 style="text-align: center; font-weight: 500">Shop</h2>
+		<div class="cards-container">
+			<div class="card">
+				<img src="./img/1.jpg" alt="Running Shoes" />
+				<div class="card-content">
+					<h2>Running Shoes</h2>
+					<p>$120</p>
+					<a href="#" class="button fill">BUY</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./img/2.jpg" alt="Sports Hoodie" />
+				<div class="card-content">
+					<h2>Sports Hoodie</h2>
+					<p>$60</p>
+					<a href="#" class="button fill">BUY</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./img/3.jpg" alt="Training Shorts" />
+				<div class="card-content">
+					<h2>Training Shorts</h2>
+					<p>$35</p>
+					<a href="#" class="button fill">BUY</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./img/4.jpg" alt="Workout Leggings" />
+				<div class="card-content">
+					<h2>Workout Leggings</h2>
+					<p>$50</p>
+					<a href="#" class="button fill">BUY</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./img/5.jpg" alt="Sports Bra" />
+				<div class="card-content">
+					<h2>Sports Bra</h2>
+					<p>$40</p>
+					<a href="#" class="button fill">BUY</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="./img/6.jpg" alt="Joggers" />
+				<div class="card-content">
+					<h2>Joggers</h2>
+					<p>$45</p>
+					<a href="#" class="button fill">BUY</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="feedback-form-container">
+			<h2>Contact Us</h2>
+			<form action="#" method="POST" class="feedback-form">
+				<fieldset>
+					<div class="form-group">
+						<label for="name">Your Name</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Enter your name"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<label for="email">Your Email</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							placeholder="Enter your email"
+							required
+						/>
+					</div>
+					<div class="form-group">
+						<label for="message">Your Message</label>
+						<textarea
+							id="message"
+							name="message"
+							rows="5"
+							placeholder="Enter your message"
+							required
+						></textarea>
+					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn submit-button">
+							Submit
+						</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		<script src="scrpit.js"></script>
+	</body>
+</html>
